@@ -1,0 +1,53 @@
+@import "setup";
+
+// font-family: 'Amaranth', sans-serif;
+// font-family: 'Titillium Web', sans-serif;
+
+
+h1 {
+    font-family: 'Amaranth', sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    padding: 50px 0;
+    display: table;
+    margin: 0 auto;
+
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.dice {
+    position: relative;
+    text-align: center;
+    p {
+        color: white;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.table {
+    border: 5px solid black;
+    h2 {
+        border-bottom: 5px solid black;
+    }
+    #rollHistory {
+        width: 200px;
+        height: 200px;
+        overflow: auto;
+    }
+}
