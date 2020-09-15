@@ -240,6 +240,18 @@ h1 {
   margin: 0 auto;
 }
 
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 button {
   border: none;
   background: transparent;
@@ -273,6 +285,22 @@ button {
   text-align: center;
 }
 
+.dice {
+  position: relative;
+  text-align: center;
+}
+
+.dice p {
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 #diceResult {
   position: relative;
   font-size: 9.5rem;
@@ -293,34 +321,6 @@ button {
   font-family: 'Titillium Web', sans-serif;
 }
 
-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.dice {
-  position: relative;
-  text-align: center;
-}
-
-.dice p {
-  color: white;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 4rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .table {
   border: 5px solid black;
   margin-bottom: 25px;
@@ -333,6 +333,7 @@ ul {
   text-align: center;
   text-transform: uppercase;
   background: white;
+  padding: 5px 0;
 }
 
 .table #rollHistory {
@@ -358,9 +359,13 @@ ul {
   border-radius: 10px;
 }
 
+.resetButton:hover {
+  background: orange;
+}
+
 /*
 ==============================================
-fadeIn
+fadeIn animations gotten from http://www.justinaguilar.com/animations/index.html#
 ==============================================
 */
 .fadeIn {
@@ -410,5 +415,58 @@ fadeIn
   100% {
     -webkit-transform: scale(1);
     opacity: 1;
+  }
+}
+
+/*
+==============================================
+fadeIn animations gotten from http://www.justinaguilar.com/animations/index.html#
+==============================================
+*/
+@media (max-width: 700px) {
+  h1 {
+    font-size: 8rem;
+    text-align: center;
+  }
+  .diceContainer {
+    width: 60%;
+  }
+  .diceContainer ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .diceContainer ul:nth-child(-n+3) {
+    padding-bottom: 35px;
+  }
+  .dice img {
+    width: 80%;
+  }
+  .dice p {
+    font-size: 3rem;
+  }
+  #diceResult {
+    padding: 125px 0;
+  }
+}
+
+@media (max-width: 372px) {
+  h1 {
+    font-size: 7rem;
+  }
+  ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  ul li {
+    padding-top: 20px;
+    width: 50%;
+  }
+  .dice p {
+    font-size: 2.5rem;
+  }
+  #diceResult {
+    padding: 100px 0;
   }
 }

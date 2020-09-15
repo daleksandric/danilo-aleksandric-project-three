@@ -9,40 +9,49 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
+    <!-- The Header for the Website -->
     <h1>dice roller</h1>
+    <!-- The main container that holds everything -->
     <div class="mainContainer">
+        <!-- The container holding the six images of the dice / interactive buttons -->
         <div class="diceContainer">
             <ul>
+                <!-- Each Individual dice (4 sided triangle) -->
                 <li>
                     <button class="dice" id="4">
                         <img src="./assets/4sided.png" alt="">
                         <p>4</p>
                     </button>
                 </li>
+                <!-- Each Individual dice (6 sided square) -->
                 <li>
                     <button class="dice" id="6">
                         <img src="./assets/6sided.png" alt="">
                         <p>6</p>
                     </button>
                 </li>
+                <!-- Each Individual dice (8 sided diamond) -->
                 <li>
                     <button class="dice" id="8">
                         <img src="./assets/8sided.png" alt="">
                         <p>8</p>
                     </button>
                 </li>
+                <!-- Each Individual dice (10 sided decagon) -->
                 <li>
                     <button class="dice" id="10">
                         <img src="./assets/10sided.png" alt="">
                         <p>10</p>
                     </button>
                 </li>
+                <!-- Each Individual dice (12 sided dodecagon) -->
                 <li>
                     <button class="dice" id="12">
                         <img src="./assets/12sided.png" alt="">
                         <p>12</p>
                     </button>
                 </li>
+                <!-- Each Individual dice (4 sided icosagon) -->
                 <li>
                     <button class="dice" id="20">
                         <img src="./assets/20sided.png" alt="">
@@ -54,7 +63,9 @@
         <div id="diceResult">
             <!-- Result from clicked dice displays here -->
         </div>
+        <!-- Container for the entire table, used for centering on the page  -->
         <div class="tableContainer">
+            <!-- The table itself -->
             <div class="table">
                 <h2>rolls</h2>
                 <div id="rollHistory">
@@ -65,6 +76,7 @@
                 -->
                 </div>
             </div>
+            <!-- Container for the reset button -->
             <div class="buttonContainer">
                 <button class="resetButton">Reset</button>
             </div>

@@ -20,7 +20,13 @@ h1 {
     padding: 50px 0;
     display: table;
     margin: 0 auto;
+    
+}
 
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 button {
@@ -48,6 +54,20 @@ button {
     text-align: center;
 }
 
+.dice {
+    position: relative;
+    text-align: center;
+    p {
+        color: white;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 4rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
 #diceResult {
     position: relative;
     font-size: 9.5rem;
@@ -65,26 +85,6 @@ button {
     }
 }
 
-ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.dice {
-    position: relative;
-    text-align: center;
-    p {
-        color: white;
-        font-family: 'Titillium Web', sans-serif;
-        font-size: 4rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
 .table {
     border: 5px solid black;
     margin-bottom: 25px;
@@ -95,6 +95,7 @@ ul {
         text-align: center;
         text-transform: uppercase;
         background: white;
+        padding: 5px 0;
     }
     #rollHistory {
         overflow: auto;
@@ -117,11 +118,14 @@ ul {
     font-size: 2rem;
     border: 2px solid black;
     border-radius: 10px;
+    &:hover {
+        background: orange;
+    }
 }
 
 /*
 ==============================================
-fadeIn
+fadeIn animations gotten from http://www.justinaguilar.com/animations/index.html#
 ==============================================
 */
 
@@ -172,4 +176,67 @@ fadeIn
 		-webkit-transform: scale(1);
 		opacity: 1;	
 	}		
+}
+
+/*
+==============================================
+fadeIn animations gotten from http://www.justinaguilar.com/animations/index.html#
+==============================================
+*/
+
+/////////////////////////////////////////////////////////////////////////////////
+                            // Media Queries //
+////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 8rem;
+        text-align:center;
+    }
+    .diceContainer {
+        width: 60%;
+        ul {
+            justify-content: space-between;
+            &:nth-child(-n+3) {
+                padding-bottom: 35px;
+            }
+        } 
+    }
+
+    .dice {
+        img {
+            width: 80%;
+        }
+        p {
+            font-size: 3rem;
+        }
+    }
+
+    #diceResult {
+        padding: 125px 0;
+    }
+}
+
+@media (max-width: 372px) {
+    h1 {
+        font-size: 7rem;
+    }
+    ul {
+        justify-content: start;
+        li {
+            padding-top: 20px;
+            width: 50%;
+        }
+    }
+
+    .dice {
+        p {
+            font-size: 2.5rem;
+        }
+    }
+
+    #diceResult {
+        padding: 100px 0;
+    }
+
 }
