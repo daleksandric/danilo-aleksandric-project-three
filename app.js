@@ -25,7 +25,7 @@ diceApp.randomDiceNumber = (diceId) => {
 diceApp.showDice = (chosenDice, diceId) => {
     $('#diceResult').html(`
     <div>
-        <img src="./assets/${diceId}sided-md.png" alt="result of ${diceId} sided die roll">
+        <img src="assets/${diceId}sided-md.png" alt="result of ${diceId} sided die roll">
         <p>${chosenDice}</p>
     </div>
     `);
