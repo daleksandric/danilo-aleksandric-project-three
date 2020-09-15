@@ -231,11 +231,15 @@ body {
   background-repeat: no-repeat;
 }
 
+body p {
+  font-family: 'Titillium Web', 'sans-serif';
+}
+
 h1 {
   font-family: 'Amaranth', sans-serif;
   text-transform: uppercase;
   font-size: 10rem;
-  padding: 50px 0;
+  padding: 25px 0 50px 0;
   display: table;
   margin: 0 auto;
 }
@@ -292,7 +296,6 @@ button {
 
 .dice p {
   color: white;
-  font-family: 'Titillium Web', sans-serif;
   font-size: 4rem;
   position: absolute;
   top: 50%;
@@ -304,7 +307,7 @@ button {
 #diceResult {
   position: relative;
   font-size: 8.5rem;
-  padding: 150px 0;
+  padding: 130px 0;
   margin: 0 auto;
 }
 
@@ -318,7 +321,6 @@ button {
 
 #diceResult div p, #diceResult p p {
   color: white;
-  font-family: 'Titillium Web', sans-serif;
 }
 
 .table {
@@ -343,7 +345,6 @@ button {
   padding: 10px;
   line-height: 23px;
   font-size: 1.8rem;
-  font-family: 'Titillium Web', 'sans-serif';
 }
 
 .table #rollHistory p:nth-child(2n) {
@@ -361,6 +362,12 @@ button {
 
 .resetButton:hover {
   background: orange;
+}
+
+footer {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 2rem;
 }
 
 /*
