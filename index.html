@@ -11,48 +11,48 @@
 <body>
     <h1>dice roller</h1>
     <div class="mainContainer">
-        <div id="diceResult">
-            <!-- Result from clicked dice displays here -->
-        </div>
         <div class="diceContainer">
             <ul>
                 <li>
-                    <div class="dice" id="4">
+                    <button class="dice" id="4">
                         <img src="./assets/4sided.png" alt="">
                         <p>4</p>
-                    </div>
+                    </button>
                 </li>
                 <li>
-                    <div class="dice" id="6">
+                    <button class="dice" id="6">
                         <img src="./assets/6sided.png" alt="">
                         <p>6</p>
-                    </div>
+                    </button>
                 </li>
                 <li>
-                    <div class="dice" id="8">
+                    <button class="dice" id="8">
                         <img src="./assets/8sided.png" alt="">
                         <p>8</p>
-                    </div>
+                    </button>
                 </li>
                 <li>
-                    <div class="dice" id="10">
+                    <button class="dice" id="10">
                         <img src="./assets/10sided.png" alt="">
                         <p>10</p>
-                    </div>
+                    </button>
                 </li>
                 <li>
-                    <div class="dice" id="12">
+                    <button class="dice" id="12">
                         <img src="./assets/12sided.png" alt="">
                         <p>12</p>
-                    </div>
+                    </button>
                 </li>
                 <li>
-                    <div class="dice" id="20">
+                    <button class="dice" id="20">
                         <img src="./assets/20sided.png" alt="">
                         <p>20</p>
-                    </div>
+                    </button>
                 </li>
             </ul>
+        </div>
+        <div id="diceResult">
+            <!-- Result from clicked dice displays here -->
         </div>
         <div class="tableContainer">
             <div class="table">
@@ -65,7 +65,9 @@
                 -->
                 </div>
             </div>
-            <button class="resetButton">Reset</button>
+            <div class="buttonContainer">
+                <button class="resetButton">Reset</button>
+            </div>
         </div>
     </div>
 </body>

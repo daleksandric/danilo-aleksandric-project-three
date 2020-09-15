@@ -221,28 +221,76 @@ textarea {
   overflow: hidden;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(../../assets/wp2021760.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 h1 {
   font-family: 'Amaranth', sans-serif;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 10rem;
   padding: 50px 0;
   display: table;
   margin: 0 auto;
+}
+
+button {
+  border: none;
+  background: transparent;
 }
 
 .mainContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.diceContainer {
+  margin: 0 auto;
+}
+
+.tableContainer {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.buttonContainer {
+  text-align: center;
+}
+
+#diceResult {
+  position: relative;
+  font-size: 9.5rem;
+  padding: 150px 0;
+  margin: 0 auto;
+}
+
+#diceResult div, #diceResult p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#diceResult div p, #diceResult p p {
+  color: black;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 ul {
@@ -253,6 +301,8 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .dice {
@@ -263,7 +313,7 @@ ul {
 .dice p {
   color: white;
   font-family: 'Titillium Web', sans-serif;
-  font-size: 40px;
+  font-size: 4rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -273,14 +323,92 @@ ul {
 
 .table {
   border: 5px solid black;
+  margin-bottom: 25px;
 }
 
 .table h2 {
   border-bottom: 5px solid black;
+  font-size: 4rem;
+  font-family: 'Amaranth', 'sans-serif';
+  text-align: center;
+  text-transform: uppercase;
+  background: white;
 }
 
 .table #rollHistory {
-  width: 200px;
-  height: 200px;
   overflow: auto;
+  background: white;
+  height: 250px;
+  padding: 10px;
+  line-height: 23px;
+  font-size: 1.8rem;
+  font-family: 'Titillium Web', 'sans-serif';
+}
+
+.table #rollHistory p:nth-child(2n) {
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.resetButton {
+  padding: 10px 20px;
+  background: white;
+  font-size: 2rem;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+/*
+==============================================
+fadeIn
+==============================================
+*/
+.fadeIn {
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  visibility: visible !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0.0;
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  80% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0.0;
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+  }
+  80% {
+    -webkit-transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
 }
